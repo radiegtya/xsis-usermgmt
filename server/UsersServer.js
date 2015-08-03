@@ -15,6 +15,9 @@ Meteor.methods({
         Accounts.createUser(doc);
         return true;
     },
+    'Users.setPassword': function(userId, newPassword){
+        Accounts.setPassword(userId, newPassword, {logout:false});
+    }
 });
 
 

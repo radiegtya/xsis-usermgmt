@@ -53,10 +53,18 @@ Template.mugenRoleActionsManage.events = {
         //set checkAll header to uncheck
         $('#checkAll').attr("checked", false);
     },
-    'click #btnSearchManage': function(e, t){
+    'change #mugenRoleCollectionId': function(e, t){
         e.preventDefault();
         Router.current().searchManage(t);
     },
+    'change #mugenRoleGroupId': function(e, t){
+        e.preventDefault();
+        Router.current().searchManage(t);
+    },
+//    'click #btnSearchManage': function(e, t){
+//        e.preventDefault();
+//        Router.current().searchManage(t);
+//    },
     'click #btnInsertManage': function(e, t){
         e.preventDefault();
         Router.current().insertManage(t);   

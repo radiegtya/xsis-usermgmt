@@ -5,6 +5,12 @@ Template.usersUpdate.events = {
         Router.current().update(t);
         Router.current()._post = false;
     },
+    'click #btnSetPassword': function(e, t) {
+        e.preventDefault();
+        Router.current()._post = true;
+        Router.current().setPassword(t);
+        Router.current()._post = false;
+    },
 };
 
 Template.usersUpdate.helpers({
