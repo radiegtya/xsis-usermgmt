@@ -16,7 +16,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{pathFor 'sitesIndex'}}">{{_ "Home"}}</a></li>
                     <li><a href="{{pathFor 'usersIndex'}}">{{_ "Users"}}</a></li>
-                    {{#if app 'activateMugen'}}
+                    {{#if currentUser}}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Role Management <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">                            
@@ -33,7 +33,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentUser.profile.name}} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{pathFor 'usersProfile'}}">{{_ "Profile"}}</a></li>
-                            <li><a target="_blank" href="https://github.com/warehouseman/meteoris/wiki/User-Manual">{{_ "Help"}}</a></li>
+                            <!--<li><a target="_blank" href="https://github.com/warehouseman/meteoris/wiki/User-Manual">{{_ "Help"}}</a></li>-->
                             <li class="divider"></li>
                             <li id="btnLogout"><a href="#">{{_ "Logout"}}</a></li>
                         </ul>
